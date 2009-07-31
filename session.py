@@ -4,10 +4,10 @@ from google.appengine.ext.webapp.util import run_wsgi_app
 class MainPage(webapp.RequestHandler):
   def get(self):
     self.response.headers['Content-Type'] = 'text/plain'
-    self.response.out.write('Hello, session World!')
+    self.response.out.write('Hello, webapp World!')
 
 application = webapp.WSGIApplication(
-                                     [('/session', MainPage)],
+                                     [('/', MainPage)],
                                      debug=True)
 
 def main():

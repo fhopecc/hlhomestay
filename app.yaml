@@ -6,3 +6,5 @@ api_version: 1
 handlers:
 - url: /.*
   script: helloworld.py
+- url: /session/.*
+  script: session.py
