@@ -3,8 +3,19 @@ version: 1
 runtime: python
 api_version: 1
 
+#handlers:
+#- url: /homestay/.*
+#  script: controllers/homestay.py
+#- url: /homestay
+#  script: controllers/homestay.py
+#
+#- url: /session/.*
+#  script: session.py
+
 handlers:
+- url: /static
+  static_dir: static
+
 - url: /.*
-  script: helloworld.py
-- url: /session/.*
-  script: session.py
+  script: main.py
+
